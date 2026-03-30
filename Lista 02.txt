@@ -1,0 +1,34 @@
+### Exercício 1: O Sensor de Estacionamento
+Fluxo do sensor de ré:
+1. *Ler distância*.
+2. *Se distância < 0.5m*:
+    - Tocar bipe contínuo.
+    - Exibir "PARE".
+3. *Se distância ≥ 0.5m E distância ≤ 2m*:
+    - Tocar bipe intermitente.
+4. *Senão* (distância > 2m):
+    - Não emitir som.
+
+### Exercício 2: O Filtro do Instagram
+Lógica do filtro de foto:
+1. Usuário escolhe uma foto.
+2. Sistema pergunta: _"Aplicar filtro P&B?"_.
+3. *Se sim*: transforma a foto em cinza.
+    - *Se não*: mantém a foto original.
+4. Sistema pergunta: _"Postar agora?"_.
+5. *Se sim*: envia a foto para o servidor.
+    - *Se não*: salva a foto na galeria.
+
+Diagrama de losangos (decisões):
+- Losango 1: _Aplicar filtro P&B?_ (sim → cinza | não → original).
+- Losango 2: _Postar agora?_ (sim → servidor | não → galeria).
+
+### Exercício 3: O Caixa Eletrônico
+Algoritmo para saque:
+1. Ler `valor_saque`.
+2. Verificar se `valor_saque ≤ saldo_disponível`.
+3. *Se verdadeiro*:
+    - Subtrair `valor_saque` do `saldo`.
+    - Entregar as notas.
+4. *Se falso*:
+    - Exibir mensagem "Saldo Insuficiente".
